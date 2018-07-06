@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+   
+}
+
+.column {
+    float: left;
+    width: 45%;
+    margin: 0%;
+    padding: 10px;
+    height: 280px;
+    margin: 2%;
+    border: 2px solid rgb(148, 132, 132);
+}
+
+
+.column1 {
+    float: left;
+    width: 45%;
+    margin: 0%;
+    padding: 10px;
+    height: 280px;
+    margin: 2%;
+    border: 2px solid rgb(148, 132, 132);
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    padding: 10px;
+}
+.active, .column:hover {
+    background-color: white;
+    color: white;
+    border-style: solid red;
+    box-shadow: 0px 0px 40px rgb(124, 148, 172);
+    border: 2px solid rgb(148, 132, 132);
+
+}
+.active, .column1:hover {
+    background-color: white;
+    color: white;
+    border-style: solid red;
+    box-shadow: 0px 0px 40px rgb(124, 148, 172);
+    border: 2px solid rgb(148, 132, 132);
+
+}
+h2, h3{
+    text-align: center;
+    text-transform: uppercase;
+}
+.item{
+    height: 40%;
+}
+
+.label{
+    text-align: center;
+    font-size: 250%;
+}
+#btnAlign{
+    height: 5em;
+    display: block;
+    align-items: center;
+    text-align: center;
+    
+}
+.all2{
+    background-image: url('../../assets/imgs/pic2.jpg');
+     background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#picAlign{
+    align-items: center;
+    text-align: center;
+}
+

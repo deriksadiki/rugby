@@ -1,0 +1,40 @@
+
+
+
+<ion-content padding class="all2">
+  <div id="picAlign">
+    <img src="../../assets/imgs/pic5.jpg">
+  </div>
+  <br>
+  <div class="row">
+    <div class="column" style="background-color:rgb(0, 0, 0);" (click)="set(1)">
+      <h2>Home</h2>
+      
+      <ion-item style="background-color:rgb(32, 26, 26);">
+        <ion-label style="background-color:rgb(255, 255, 255);">{{Hscore}}</ion-label>
+      </ion-item>
+      <h3 style="color: white">{{ homename }}
+        </h3>
+    </div>
+    <div class="column1" style="background-color:rgb(0, 0, 0);" (click)="set(2)">
+      <h2 >Away</h2>
+      <ion-item style="background-color:rgb(32, 26, 26);">
+        <ion-label style="background-color:rgb(255, 255, 255);" >{{Ascore}}</ion-label>
+      </ion-item>
+      <h3 style="color: white">{{awayname}}</h3>
+    </div>
+  </div>
+<div id="btnAlign">
+  <button ion-button style=" width: 168px;" (click) = "Addtry()" color="dark" >Try (5 Points)</button>
+  <button ion-button (click) = "undotry()" color="dark"  ><ion-icon name="undo"></ion-icon></button>
+  <br>
+  <button ion-button style=" width: 168px;" (click) = "Penalty()" color="dark" >Penalty (3 Points)</button>
+  <button ion-button  (click) = "unPenalty()" color="dark"  > <ion-icon ios="ios-undo" md="md-undo"></ion-icon></button>
+  <br>
+  <button ion-button style=" width: 168px;"(click) = "Conversion()" color="dark"  >Conversion (2 Points)</button>
+  <button ion-button   (click) = "undoConversion()" color="dark"  ><ion-icon name="undo"></ion-icon></button>
+  <br>
+  <br>
+  <button ion-button style=" width: 250px;" (click) = "resert()" color="dark" >Resert</button>
+</div>
+</ion-content>

@@ -1,0 +1,31 @@
+.item.item-trns{
+	border-color: rgba(0, 0, 0, 0);
+	background-color: rgba(0, 0, 0, 0);
+    border: 2px solid rgb(120, 139, 148);
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:center;
+}
+#con{
+    margin: auto;
+    width: 90%;
+    position: relative;
+    top: 165px;
+ 
+}
+#ok{
+    width: 100%;
+    border-radius: 10px;
+    bottom: 0;
+}
+.icon{
+    float: right;
+}
+.all{
+    background-image: url('../../assets/imgs/pic2.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
