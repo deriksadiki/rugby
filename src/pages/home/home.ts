@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import arr from '../login/login';
 import {LoginPage} from '../login/login'
+import { AlertController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -9,7 +10,7 @@ import {LoginPage} from '../login/login'
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
 
   }
 
@@ -83,7 +84,11 @@ len;
         }
         else if (x == this.trackScore.length - 1)
         {
-            alert("there is no try that was added") 
+            const alert = this.alertCtrl.create({
+              title: "No try has been added on the team",
+              buttons: [{ text:'OK'}]
+            });
+            alert.present();
         }
       }
       if (this.Hscore < 0)
@@ -100,7 +105,11 @@ len;
         }
         else if (x == this.trackScore.length - 1)
         {
-            alert("there is no try that was added") 
+          const alert = this.alertCtrl.create({
+            title: "No try has been added on the team",
+            buttons: [{ text:'OK'}]
+          });
+          alert.present();
         
         }
       if ( this.Ascore < 0)
@@ -111,7 +120,7 @@ len;
   unPenalty(){
     if (this.team == 1){
       for (var x = 0; x < this.trackScore.length; x++){
-        if (this.trackTeam[x] == 2 && this.trackScore[x] == "Penalty")
+        if (this.trackTeam[x] == 1 && this.trackScore[x] == "Penalty")
         {
           this.Hscore = this.Hscore - 3;
           this.trackScore.splice(x,1);
@@ -120,7 +129,11 @@ len;
         }
         else if (x == this.trackScore.length - 1)
         {
-            alert("there is no Penalty that was added") 
+          const alert = this.alertCtrl.create({
+            title: "No Penalty has been added on the team",
+            buttons: [{ text:'OK'}]
+          });
+          alert.present();
         
         }
       }
@@ -139,7 +152,11 @@ len;
         }
         else if (x == this.trackScore.length - 1)
         {
-            alert("there is no Penalty that was added") 
+          const alert = this.alertCtrl.create({
+            title: "No Penalty has been added on the team",
+            buttons: [{ text:'OK'}]
+          });
+          alert.present();
         
         }
       }
@@ -151,7 +168,7 @@ len;
   undoConversion(){
     if (this.team == 1){
       for (var x = 0; x < this.trackScore.length; x++){
-        if (this.trackTeam[x] == 2 && this.trackScore[x] == "Conversion")
+        if (this.trackTeam[x] == 1 && this.trackScore[x] == "Conversion")
         {
           this.Hscore = this.Hscore - 2;
           this.trackScore.splice(x,1);
@@ -160,7 +177,11 @@ len;
         }
         else if (x == this.trackScore.length - 1)
         {
-            alert("there is no Conversion that was added") 
+          const alert = this.alertCtrl.create({
+            title: "No Conversionhas been added on the team",
+            buttons: [{ text:'OK'}]
+          });
+          alert.present();
         }
       }
       if (this.Hscore < 0)
@@ -177,7 +198,11 @@ len;
         }
         else if (x == this.trackScore.length - 1)
         {
-            alert("there is no Conversion that was added") 
+          const alert = this.alertCtrl.create({
+            title: "No Conversionhas been added on the team",
+            buttons: [{ text:'OK'}]
+          });
+          alert.present();
         }
       }
 
